@@ -1,6 +1,7 @@
 import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import messagebox
+from database import Database
 
 
 class Reg_App:
@@ -16,35 +17,37 @@ class Reg_App:
         root.geometry(alignstr)
         root.resizable(width=False, height=False)
 
+        self.database = Database("database.db")
+
         GLineEdit_RegLogin = tk.Entry(root)
         GLineEdit_RegLogin["borderwidth"] = "1px"
         ft = tkFont.Font(family='Times', size=10)
         GLineEdit_RegLogin["font"] = ft
         GLineEdit_RegLogin["fg"] = "#333333"
         GLineEdit_RegLogin["justify"] = "center"
-        GLineEdit_RegLogin["text"] = "Entry"
+        GLineEdit_RegLogin["text"] = ""
         GLineEdit_RegLogin.place(x=230, y=60, width=100, height=25)
         self.GLineEdit_RegLogin = GLineEdit_RegLogin
 
-        GLineEdit_RegPassword = tk.Entry(root)
+        GLineEdit_RegPassword = tk.Entry(root, show="*")
         GLineEdit_RegPassword["borderwidth"] = "1px"
         ft = tkFont.Font(family='Times', size=10)
         GLineEdit_RegPassword["font"] = ft
         GLineEdit_RegPassword["fg"] = "#333333"
         GLineEdit_RegPassword["justify"] = "center"
-        GLineEdit_RegPassword["text"] = "Entry"
+        GLineEdit_RegPassword["text"] = ""
         GLineEdit_RegPassword.place(x=230, y=110, width=100, height=25)
         self.GLineEdit_RegPassword = GLineEdit_RegPassword
 
-        GLineEdit_RegPassword1 = tk.Entry(root)
+        GLineEdit_RegPassword1 = tk.Entry(root, show="*")
         GLineEdit_RegPassword1["borderwidth"] = "1px"
         ft = tkFont.Font(family='Times', size=10)
         GLineEdit_RegPassword1["font"] = ft
         GLineEdit_RegPassword1["fg"] = "#333333"
         GLineEdit_RegPassword1["justify"] = "center"
-        GLineEdit_RegPassword1["text"] = "Entry"
+        GLineEdit_RegPassword1["text"] = ""
         GLineEdit_RegPassword1.place(x=230, y=150, width=100, height=25)
-        self.GLineEdit_RegPassword2 = GLineEdit_RegPassword1
+        self.GLineEdit_RegPassword1 = GLineEdit_RegPassword1
 
         GMessage_Login = tk.Message(root)
         ft = tkFont.Font(family='Times', size=10)
@@ -98,15 +101,30 @@ class Reg_App:
         GButton_Cancel.place(x=290, y=190, width=100, height=25)
         GButton_Cancel["command"] = self.GButton_CancelRegister
 
+    def password_complexity(self, password1):
+        has_upper = any(char.isupper() for char in password1)
+        has_lower = any(char.islower() for char in password1)
+        has_digit = any(char.isdigit() for char in password1)
+        cpecial = ['!', '@', '#', '$', '^', '&', '*', '(', ')', '_', '|', ':', ';', '/']
+        has_special = any(char in cpecial for char in password1)
+        return has_upper and has_lower and has_digit and has_special
+
     def GButton_Register(self):
         login = self.GLineEdit_RegLogin.get()
+        users = self.database.get_users()
         password = self.GLineEdit_RegPassword.get()
         password1 = self.GLineEdit_RegPassword1.get()
         if password != password1:
-            messagebox.showerror("Password != Password1")
+            messagebox.showerror("Error", "Passwords do not match")
+        elif login in users:
+            messagebox.showerror("Error", "User already registered")
+        elif not self.password_complexity(password):
+            messagebox.showerror("Error", "Password does not meet complexity requirements")
+        else:
+            self.database.insert_users(login, password)
 
     def GButton_CancelRegister(self):
-        messagebox.showerror("Password != Password1")
+        messagebox.showerror("Error", "Pass")
 
 
 if __name__ == "__main__":

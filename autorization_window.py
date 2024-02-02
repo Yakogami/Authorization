@@ -16,7 +16,7 @@ import time
 class App:
     def __init__(self, root):
         self.root = root
-        self.database = Database("users_database.db")
+        self.database = Database("database.db")
 
         # setting title
         root.title("Authorization")
@@ -49,7 +49,7 @@ class App:
         GButton_register["justify"] = "center"
         GButton_register["text"] = "Register"
         GButton_register.place(x=300, y=110, width=100, height=30)
-        GButton_register["command"] = self.open_RegisterWindow
+        GButton_register["command"] = self.GButton_reg_command
 
         GMessage_1 = tk.Message(root)
         ft = tkFont.Font(family='Times', size=10)
@@ -93,13 +93,6 @@ class App:
     def GButton_log_command(self):
         print("command")
     def GButton_reg_command(self):
-        print("command")
-
-    def on_closing(self):
-        if messagebox.askokcancel("Exit", "Cancel authorization?"):
-            self.root.destroy()
-
-    def open_RegisterWindow(self):
         new_root = tkinter.Toplevel(root)
         registration_window = Reg_App(new_root)  # Создаем экземпляр класса MyWindow
         new_root.title("Registration")
@@ -107,6 +100,10 @@ class App:
         new_root.grab_set()
         new_root.focus_set()
         new_root.mainloop()
+
+    def on_closing(self):
+        if messagebox.askokcancel("Exit", "Cancel authorization?"):
+            self.root.destroy()
 
 
 if __name__ == "__main__":
