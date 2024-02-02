@@ -86,7 +86,7 @@ class App:
         GLineEdit_password.place(x=200, y=70, width=200, height=30)
         self.GLineEdit_password = GLineEdit_password
 
-
+    # Хуй знает что делать после этого логина... Нужно придумать какую-то дальнейшую реализацию
     def login(self):
         login = self.GLineEdit_login.get()
         password = self.GLineEdit_password.get()
