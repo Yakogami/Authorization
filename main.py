@@ -1,16 +1,10 @@
 import tkinter
 import tkinter as tk
 import tkinter.font as tkFont
-import tkinter as ttk
 from tkinter import messagebox
 from database import Database
-import datetime
 from registration_window import Reg_App
-import time
 
-
-# import getpass
-# pswd = getpass.getpass('Password:')
 
 class App:
     def __init__(self, root):
@@ -93,7 +87,6 @@ class App:
         # huy = [login, password]
         pizda = self.database.all_users()
         print(pizda)
-
 
     def GButton_reg_command(self):
         new_root = tkinter.Toplevel(root)
