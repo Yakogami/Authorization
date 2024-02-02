@@ -10,7 +10,6 @@ import time
 
 
 # import getpass
-#
 # pswd = getpass.getpass('Password:')
 
 class App:
@@ -39,7 +38,7 @@ class App:
         GButton_login["justify"] = "center"
         GButton_login["text"] = "Login"
         GButton_login.place(x=200, y=110, width=100, height=30)
-        GButton_login["command"] = self.GButton_log_command
+        GButton_login["command"] = self.login
 
         GButton_register = tk.Button(root)
         GButton_register["bg"] = "#f0f0f0"
@@ -87,11 +86,15 @@ class App:
         GLineEdit_password.place(x=200, y=70, width=200, height=30)
         self.GLineEdit_password = GLineEdit_password
 
-        label = tk.Label()
-        label.pack(padx=6, pady=6)
 
-    def GButton_log_command(self):
-        print("command")
+    def login(self):
+        login = self.GLineEdit_login.get()
+        password = self.GLineEdit_password.get()
+        # huy = [login, password]
+        pizda = self.database.all_users()
+        print(pizda)
+
+
     def GButton_reg_command(self):
         new_root = tkinter.Toplevel(root)
         registration_window = Reg_App(new_root)  # Создаем экземпляр класса MyWindow

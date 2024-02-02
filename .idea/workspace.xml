@@ -7,9 +7,9 @@
     <list default="true" id="7e725e00-2de3-4f49-82e1-983c15aed902" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autorization_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/autorization_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/registration_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_database.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,7 @@
     "Python.autorization_window.executor": "Run",
     "Python.database.executor": "Run",
     "Python.get_entry.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.registration_window.executor": "Run",
     "Python.users_database.executor": "Run",
     "Python.window_main.executor": "Run",
@@ -70,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706756415127</updated>
       <workItem from="1706756417437" duration="1000" />
-      <workItem from="1706757362218" duration="21190000" />
+      <workItem from="1706757362218" duration="25836000" />
     </task>
     <servers />
   </component>
@@ -81,8 +82,9 @@
     <SUITE FILE_PATH="coverage/AutorizationWindow$users_database.coverage" NAME="users_database Coverage Results" MODIFIED="1706757382680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AutorizationWindow$window_main.coverage" NAME="window_main Coverage Results" MODIFIED="1706861374040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../pythonProject2" />
     <SUITE FILE_PATH="coverage/AutorizationWindow$get_entry.coverage" NAME="get_entry Coverage Results" MODIFIED="1706860054582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AutorizationWindow$registration_window.coverage" NAME="registration_window Coverage Results" MODIFIED="1706888635322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AutorizationWindow$database.coverage" NAME="database Coverage Results" MODIFIED="1706885062702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AutorizationWindow$autorization_window.coverage" NAME="autorization_window Coverage Results" MODIFIED="1706886890424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AutorizationWindow$registration_window.coverage" NAME="registration_window Coverage Results" MODIFIED="1706892299196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AutorizationWindow$main.coverage" NAME="main Coverage Results" MODIFIED="1706894138370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/chatgpt-telegram-bot-main/bot" />
+    <SUITE FILE_PATH="coverage/AutorizationWindow$database.coverage" NAME="database Coverage Results" MODIFIED="1706890182467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AutorizationWindow$autorization_window.coverage" NAME="autorization_window Coverage Results" MODIFIED="1706893207015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
