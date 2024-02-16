@@ -85,6 +85,7 @@ class Reg_App:
         GButton_Register = tk.Button(root)
         GButton_Register["bg"] = "#f0f0f0"
         ft = tkFont.Font(family='Times', size=10)
+        GButton_Register["cursor"] = "hand2"
         GButton_Register["font"] = ft
         GButton_Register["fg"] = "#000000"
         GButton_Register["justify"] = "center"
@@ -95,6 +96,7 @@ class Reg_App:
         GButton_Cancel = tk.Button(root)
         GButton_Cancel["bg"] = "#f0f0f0"
         ft = tkFont.Font(family='Times', size=10)
+        GButton_Cancel["cursor"] = "hand2"
         GButton_Cancel["font"] = ft
         GButton_Cancel["fg"] = "#000000"
         GButton_Cancel["justify"] = "center"
@@ -102,7 +104,7 @@ class Reg_App:
         GButton_Cancel.place(x=290, y=190, width=100, height=25)
         GButton_Cancel["command"] = self.on_closing
 
-    @staticmethod
+    @staticmethod     # Добавить описание требования пароля
     def password_complexity(password):
         has_upper = any(char.isupper() for char in password)
         has_lower = any(char.islower() for char in password)
@@ -133,3 +135,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = Reg_App(root)
     root.mainloop()
+
+# asdsadasdasdas

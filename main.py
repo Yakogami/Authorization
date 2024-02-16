@@ -27,6 +27,7 @@ class App:
         GButton_login = tk.Button(root)
         GButton_login["bg"] = "#f0f0f0"
         ft = tkFont.Font(family='Times', size=10)
+        GButton_login["cursor"] = "hand2"
         GButton_login["font"] = ft
         GButton_login["fg"] = "#000000"
         GButton_login["justify"] = "center"
@@ -37,6 +38,7 @@ class App:
         GButton_register = tk.Button(root)
         GButton_register["bg"] = "#f0f0f0"
         ft = tkFont.Font(family='Times', size=10)
+        GButton_register["cursor"] = "hand2"
         GButton_register["font"] = ft
         GButton_register["fg"] = "#000000"
         GButton_register["justify"] = "center"

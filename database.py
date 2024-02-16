@@ -12,7 +12,7 @@ class Database:
 
     def insert_users(self, username, password):
         proxy = self.connection.cursor()
-        proxy.execute('INSERT INTO Users_database (Login, Password) VALUES (?,?)',
+        proxy.execute('INSERT INTO Users_database (login, password) VALUES (?,?)',
                       (username, sha256(password.encode()).hexdigest()))
         self.connection.commit()
 
